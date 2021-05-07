@@ -1,0 +1,32 @@
+ Every file in Linux has the following attributes −
+1)Owner permissions − The owner's permissions determine what actions the owner of the file can perform on the file.
+2)Group permissions − The group's permissions determine what actions a user, who is a member of the group that a file belongs to, can perform on the file.
+3)Other permissions − The permissions for others indicate what action all other users can perform on the file.
+     Using ls -l command, it displays various information related to file permission 
+     
+1)Read-Grants the capability to read, i.e., view the contents of the file.
+2)Write-Grants the capability to modify, or remove the content of the file.
+3)ExecuteUser with execute permissions can run a file as a program.
+
+Directory Access Modes:
+Directory access modes are listed and organized in the same manner as any other file.
+r = read permission
+w = write permission
+x = execute permission
+- = no permission
+
+Lets take an example
+-rw-rw-r—
+ the first '-' implies that we have selected a file
+The first part of the code is 'rw-'. 
+This suggests that the owner 'Home' can:
+Read the file
+Write or edit the file
+Cannot execute the file.
+The second part is 'rw-'. It for the user group 'Home' and group-members can:
+Read the file
+Write or edit the file
+The third part is for the world which means any user. It says 'r--'. This means the user can only:
+Read the file
+
+
