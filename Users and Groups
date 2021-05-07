@@ -1,0 +1,21 @@
+USERS AND GROUPS
+Users- Users are the accounts, used to login into a system. Each user identified with unique identification number.The information of users in a system are stored in /etc/passwd file. The hashed passwords for users are stored in /etc/shadow file.
+This file stores the user information in the following format:
+[username]:[x]:[UID]:[GID]:[comment]:[home_directory]:[default_shell]
+Groups- The purpose of groups is to define a set of privileges such as reading, writing, or executing permission for a given resource that can be shared among the users within the group.
+The file stores the user information in the following format:
+[group_name]:[x]:[GID]:[group_users_list]
+Primary Groups-A primary group is the default group that a user account belongs to. Every user  belongs to a primary group. A user’s primary group is usually the group that is recorded in your system’s /etc/passwd file. 
+Secondary Groups-Once a user has been created with their primary group, they can be added to secondary groups.  system users can have a maximum of 15 secondary groups. A systems groups are stored in the /etc/group file.
+
+Commands are used to perform following operations.
+
+adduser: add a user to the system.
+userdel: delete a user account and related files.
+addgroup: add a group to the system.
+delgroup: remove a group from the system.
+usermod: modify a user account.
+chage: change user password expiry information.
+sudo: run one or more commands as another user
+
+
