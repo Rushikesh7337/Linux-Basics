@@ -1,0 +1,32 @@
+Linux Partitions :-
+large storage devices are divided into separate sections called partitions. Partitioning useful to divide our hard drive into isolated sections, where each section behaves as its own hard drive. Partitioning is particularly useful if we have to run multiple operating systems.There are lots of powerful tools for creating, removing, and otherwise manipulating disk partitions in Linux. 
+MBR (Master Boot Record) and GPT (GUID Partition Table) are the most widely used partition tables
+MBR
+1.	In the MBR scheme with 32-bit entries, we can only have a maximum disk size of 2 TB
+2.	only four primary partitions are allowed.
+3.	MBR also contains a boot loader that is written in the initial sectors of the drive
+GPT
+1.	can have up to 128 partitions (128-bit entries)
+2.	MBR also contains a boot loader
+
+
+Steps to create partitions
+1.	List partitions
+2.	Label a partition
+3.	Use mkpart to make a partition
+4.	Let the partition be create/settle
+5.	Attach the file system to the partition
+6.	Create a Mount point directory
+7.	Add entry in fstab
+8.	Systemctl daemon-reload
+9.	Mount the partition on the directory
+10.	Reboot
+Commands
+List block with UUID: lsblk –fs/dev/vdb
+List partitions: parted -l
+Make label to a partition: parted/dev/vdb mklabel msdos
+Create a partition: mkpart
+Wait till partition is registered successfully: udevadam settle
+Format file system with XFS file system: mkfs.xfs /dev/vdb1
+Restart daemon service: systemctl daemon-reload
+
